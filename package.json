@@ -1,0 +1,32 @@
+{
+  "name": "microfrontend-orchestrator-uploader",
+  "version": "1.0.0",
+  "description": "GitHub Action to zip a folder and upload to microfrontend orchestrator service",
+  "main": "index.js",
+  "scripts": {
+    "build": "ncc build index.js -o dist",
+    "package": "ncc build --source-map --license licenses.txt",
+    "all": "npm run build && npm run package"
+  },
+  "dependencies": {
+    "adm-zip": "^0.5.10",
+    "node-fetch": "^3.3.2",
+    "@actions/core": "^1.11.1",
+    "@actions/exec": "^1.1.1",
+    "@actions/github": "^6.0.0",
+    "@actions/io": "^2.1.0"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.38.1",
+    "eslint": "^8.56.0",
+    "jest": "^29.7.0"
+  },
+  "keywords": [
+    "github-actions",
+    "microfrontend",
+    "orchestrator",
+    "deployment"
+  ],
+  "author": "Lorenzo De Francesco",
+  "license": "MIT"
+}

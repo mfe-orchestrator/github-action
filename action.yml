@@ -1,0 +1,34 @@
+name: 'Microfrontend Orchestrator Uploader'
+description: 'Zip a folder and upload it to microfrontend orchestrator service'
+author: 'Lorenzo De Francesco'
+branding:
+  icon: 'upload-cloud'
+  color: 'blue'
+inputs:
+  apikey:
+    description: 'API key for authentication into microfrontend orchestrator service'
+    required: true
+    default: ${{ github.token }}
+  microfrontend-slug:
+    description: 'Slug of the microfrontend'
+    required: true
+  domain:
+    description: 'Base domain of the microfrontend orchestrator service (e.g. https://microfrontend-orchestrator-hub.com)'
+    required: true
+  file-path:
+    description: 'Path to the folder to zip (default: dist)'
+    required: false
+    default: 'dist'
+  version:
+    description: 'Version to upload (default: github.ref_name)'
+    required: false
+    default: ${{ github.ref_name }}
+outputs:
+  upload-url:
+    description: 'The URL of the uploaded package'
+  status:
+    description: 'The status of the upload operation'
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
+  post: 'cleanup.js'
