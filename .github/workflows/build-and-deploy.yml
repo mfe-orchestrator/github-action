@@ -43,5 +43,6 @@ jobs:
             package.json
             pnpm-lock.yaml
             LICENSE
+            README.md
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
