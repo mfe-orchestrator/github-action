@@ -47,7 +47,7 @@ jobs:
         npm run build
         
     - name: Upload to Micro Frontend Hub
-      uses: your-org/this-action@v1
+      uses: mfe-orchestrator-hub/github-action@v1
       with:
         apikey: ${{ secrets.MICROFRONTEND_API_KEY }}
         microfrontend-slug: 'your-microfrontend'
