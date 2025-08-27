@@ -8,13 +8,13 @@ inputs:
   apikey:
     description: 'API key for authentication into microfrontend orchestrator service'
     required: true
-    default: ${{ github.token }}
   microfrontend-slug:
     description: 'Slug of the microfrontend'
     required: true
   domain:
     description: 'Base domain of the microfrontend orchestrator service (e.g. https://microfrontend-orchestrator-hub.com)'
-    required: true
+    required: false
+    default: 'https://mfe-orchestrator.defrancesco.ovh'
   file-path:
     description: 'Path to the folder to zip (default: dist)'
     required: false
