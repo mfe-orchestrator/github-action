@@ -13,4 +13,7 @@ process.env.INPUT_VERSION = '1.0.1';
 import('../index.js').catch(err => {
   console.error('❌ Error importing action:', err);
   process.exit(1);
+}).then(()=>{
+  console.log('✅ Action imported successfully');
+  process.exit(0);
 });
