@@ -23,9 +23,6 @@ importers:
       adm-zip:
         specifier: ^0.5.10
         version: 0.5.16
-      dotenv:
-        specifier: ^17.2.1
-        version: 17.2.1
       form-data:
         specifier: ^4.0.4
         version: 4.0.4
@@ -36,6 +33,9 @@ importers:
       '@vercel/ncc':
         specifier: ^0.38.3
         version: 0.38.3
+      dotenv:
+        specifier: ^17.2.1
+        version: 17.2.1
       eslint:
         specifier: ^8.56.0
         version: 8.57.1
