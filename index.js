@@ -20,7 +20,7 @@ async function run() {
     core.info(`Zipped folder: ${zipPath}`);
 
     // 2. Upload
-    const url = `${domain}/microfrontends/by-slug/${microfrontendSlug}/upload/${version}?apiKey=${apikey}`;
+    const url = `${domain}/api/microfrontends/by-slug/${microfrontendSlug}/upload/${version}?apiKey=${apikey}`;
     core.info(`Uploading to ${url}...`);
 
     const stats = fs.statSync(zipPath);
