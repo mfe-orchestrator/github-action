@@ -51,6 +51,7 @@ async function run() {
 
     core.info(`Upload completed`);
     core.setOutput('status', 'success');
+    process.exit(0)
   } catch (error) {
     core.setFailed(error.message);
     core.setOutput('status', 'error');
