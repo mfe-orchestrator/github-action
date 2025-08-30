@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "GitHub Action to zip a folder and upload to microfrontend orchestrator service",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "dev": "node __test__/test-local.js",
-    "build": "ncc build index.js -o dist",
+    "build": "ncc build index.js -o dist && rm dist/package.json",
     "package": "ncc build --source-map --license licenses.txt",
     "all": "npm run build && npm run package"
   },
