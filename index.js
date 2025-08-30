@@ -50,9 +50,10 @@ async function run() {
     }
 
     core.info(`Upload completed`);
-    core.setOutput('complete',  true);
+    core.setOutput('status', 'success');
   } catch (error) {
     core.setFailed(error.message);
+    core.setOutput('status', 'error');
   }
 }
 
