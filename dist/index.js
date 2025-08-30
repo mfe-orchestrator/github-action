@@ -40908,8 +40908,7 @@ async function run() {
         ...form.getHeaders(),
         'Accept': 'application/json'
       },
-      body: form,
-      duplex: 'half'
+      body: form
     });
 
     if (!response.ok) {
@@ -40918,9 +40917,7 @@ async function run() {
     }
 
     core.info(`Upload completed`);
-
-    core.setOutput('response', response);
-    return response
+    core.setOutput('complete',  true);
   } catch (error) {
     core.setFailed(error.message);
   }
