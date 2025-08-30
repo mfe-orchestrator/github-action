@@ -1,6 +1,7 @@
-export const id = 886;
-export const ids = [886];
-export const modules = {
+"use strict";
+exports.id = 886;
+exports.ids = [886];
+exports.modules = {
 
 /***/ 4886:
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
@@ -447,3 +448,4 @@ async function toFormData(Body, ct) {
 /***/ })
 
 };
+;
