@@ -32,6 +32,14 @@ jobs:
 
       - name: 🔨 Build
         run: pnpm build
+
+      - name: 💾 Commit dist
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add dist
+          git commit -m "chore: build dist for release $GITHUB_REF_NAME" || echo "No changes to commit"
+          git push origin HEAD:${GITHUB_REF}
         
       - name: 🏷️ Create Release
         uses: softprops/action-gh-release@v2

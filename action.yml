@@ -30,5 +30,5 @@ outputs:
     description: 'The status of the upload operation'
 runs:
   using: 'node16'
-  main: 'index.js'
+  main: 'dist/index.js'
   #post: 'cleanup.js'
