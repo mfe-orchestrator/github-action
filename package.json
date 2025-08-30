@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "GitHub Action to zip a folder and upload to microfrontend orchestrator service",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "build": "ncc build index.js -o dist",
     "package": "ncc build --source-map --license licenses.txt",
