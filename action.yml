@@ -12,9 +12,9 @@ inputs:
     description: 'Slug of the microfrontend'
     required: true
   domain:
-    description: 'Base domain of the microfrontend orchestrator service (e.g. https://microfrontend-orchestrator-hub.com)'
+    description: 'Base domain of the microfrontend orchestrator service (e.g. https://console.mfe-orchestrator.dev)'
     required: false
-    default: 'https://mfe-orchestrator.defrancesco.ovh'
+    default: 'https://console.mfe-orchestrator.dev'
   file-path:
     description: 'Path to the folder to zip (default: dist)'
     required: false
